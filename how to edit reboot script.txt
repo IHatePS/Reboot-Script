@@ -1,0 +1,22 @@
+to edit the reboot notification script
+
+edit the script
+convert to .exe
+convert to base64
+replace the existing base 64 in the installer script
+
+convert script to .exe
+use ps2exe.ps1
+---------------------------------------------------------------------------------------------------------------------------------------
+convert .exe to base 64
+$SourceFile    = "C:\Test\rebootfinal.exe"
+$B64File       = "C:\Test\b64test.txt"
+
+[IO.File]::WriteAllBytes($B64File,[char[]][Convert]::ToBase64String([IO.File]::ReadAllBytes($SourceFile)))
+--------------------------------------------------------------------------------------------------------------------------------
+convert base64 string (in the script NOT A FILE)
+$filename = 'C:\Test\backtoexe2.exe'
+$b64 = ''
+
+$bytes = [Convert]::FromBase64String($b64)
+[IO.File]::WriteAllBytes($filename, $bytes)

@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\powershell]
+@="URL:PowerShell Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\powershell\DefaultIcon]
+@="powershell.exe,1"
+
+[HKEY_CLASSES_ROOT\powershell\shell]
+
+[HKEY_CLASSES_ROOT\powershell\shell\open]
+
+[HKEY_CLASSES_ROOT\powershell\shell\open\command]
+@="C:\\scripts\\Protocol reg\\BurntToast.cmd %1"
